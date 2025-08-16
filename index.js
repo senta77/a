@@ -1,7 +1,7 @@
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const config = require('./config.json');
 const axios = require('axios');
-const keep_alive = require('./keep_alive.js')
+const createServer = require('./keep_alive.js')
 
 const client = new Client({
     intents: [
@@ -73,5 +73,5 @@ client.on('messageCreate', async message => {
             break;
     }
 });
-keep_alive()
+createServer()
 client.login(process.env.token);
