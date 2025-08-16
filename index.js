@@ -73,5 +73,4 @@ client.on('messageCreate', async message => {
             break;
     }
 });
-createServer()
 client.login(process.env.token);
